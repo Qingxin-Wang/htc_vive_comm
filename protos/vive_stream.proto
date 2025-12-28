@@ -1,0 +1,20 @@
+syntax = "proto3";
+package dexcap;
+
+// Pose of a single Vive tracker.
+message TrackerPose {
+  string role = 1;  // Vive tracker role string, e.g. "right_elbow".
+  double px = 2;
+  double py = 3;
+  double pz = 4;
+  double qw = 5;
+  double qx = 6;
+  double qy = 7;
+  double qz = 8;
+}
+
+// A frame of tracker poses stamped on the Windows sender.
+message ViveFrame {
+  uint64 timestamp_ns = 1;
+  repeated TrackerPose trackers = 2;
+}
