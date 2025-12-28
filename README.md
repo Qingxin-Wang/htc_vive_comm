@@ -34,6 +34,7 @@ This folder mirrors the DexCap Vive streaming scripts and adds a mock sender so 
   ```bash
   python vive_stream_sender_win.py --host <receiver_ip> --port 50051 --roles right_elbow left_elbow chest --verbose
   ```
+- SteamVR 无头模式参考：<https://github.com/username223/SteamVRNoHeadset>
 
 ## Running the unit test
 The test spins up a local TCP server and uses `mock_sender` to verify framing and payloads:
